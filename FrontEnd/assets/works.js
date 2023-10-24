@@ -11,8 +11,9 @@ function createWorkFigure(work) {
     const captionElement = document.createElement('figcaption');
     captionElement.innerText = work.title;
 
-    figureElement.appendChild(captionElement);
     figureElement.appendChild(imageElement);
+    figureElement.appendChild(captionElement);
+    figureElement.setAttribute('data-category', work.category.name);
 
     return figureElement;
 }
