@@ -21,6 +21,15 @@ async function admin() {
     }
 }
 
+function openModal() {
+    document.querySelector('.overlay').style.display = "block";
+    document.querySelector('.modalContainer').style.display = "flex";
+}
+
+function closeModal() {
+    document.querySelector('.overlay').style.display = "none";
+    document.querySelector('.modalContainer').style.display = "none";
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     admin();

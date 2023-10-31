@@ -15,14 +15,16 @@
 </head>
 
 <body>
-	<div class="editBar">
+	<div onclick="closeModal()"" class="overlay"></div>
+
+	<div onclick ="openModal()" class="editBar">
 		<i class="fa-regular fa-pen-to-square"></i>
 		<p>Mode édition</p>
 	</div>
 
 	<dialog class="modalContainer">
 		<div class="modal">
-			<i class="fa-solid fa-xmark closeModal"></i>
+			<i onclick="closeModal()" class="fa-solid fa-xmark closeModal"></i>
 			<h2>Galerie photo</h2>
 			<div class="galleryModal"></div>
 			<hr>
@@ -59,7 +61,7 @@
 		<section id="portfolio">
 			<div class="editModal">
 				<h2>Mes Projets</h2>
-				<p class="editButton">
+				<button onclick="openModal()" class="editButton">
 					<i class="fa-regular fa-pen-to-square"></i>
 					modifier</button>
 			</div>
@@ -93,9 +95,9 @@
 		</nav>
 	</footer>
 
-	<script src="./assets/admin.js"></script>
 	<script src="./assets/filters.js"></script>
 	<script src="./assets/works.js"></script>
+	<script src="./assets/admin.js"></script>
 
 
 </body>
