@@ -194,6 +194,95 @@ li:hover {
 	color: #B1663C;
 }
 
+.modalContainer {
+	display: flex;
+	top: 601px;
+}
+
+.modal {
+	width: 630px;
+	height: 688px;
+	border-radius: 10px;
+}
+
+.modal h2 {
+	display: flex;
+	justify-content: center;
+	font-family: "Work Sans";
+	font-size: 26px;
+	font-weight: 400;
+	color: black;
+	padding-top: 45px
+}
+
+.modal figure {
+	position: relative;
+}
+
+.modal .fa-xmark {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 615px;
+	top: 30px;
+}
+
+figure .fa-trash-can {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 9px;
+	color: white;
+	width: 17px;
+	height: 17px;
+	background-color: black;
+	border-radius: 2px;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	left: 54px;
+}
+
+.galleryModal {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding: 46px 105px 68px 105px;
+	column-gap: 9px;
+	row-gap: 27px;
+}
+
+.galleryModal img {
+	width: 76px;
+	height: auto;
+}
+
+.galleryModal figcaption {
+	display: none;
+}
+
+hr {
+	width: 420px;
+	height: 0px;
+	color: #B3B3B3;
+	border: 1px solid #B3B3B3;
+}
+
+.addPictureButton {
+	display: block;
+	cursor: pointer;
+	background-color: #1D6154;
+	color: white;
+	width: 237px;
+	height: 36px;
+	font-family: "Syne";
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 60px;
+	border: none;
+	margin: 38px auto 23px auto;
+}
+
 .editBar {
 	display: flex;
 	justify-content: center;
@@ -241,7 +330,7 @@ li:hover {
 	text-align: center;
 }
 
-.editModale {
+.editModal {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -249,7 +338,7 @@ li:hover {
 	margin-bottom: 6.5em;
 }
 
-.editModale p {
+.editModal p {
 	margin-left: 30px;
 }
 
@@ -294,13 +383,14 @@ li:hover {
 
 }
 
-#contact, #login {
+#contact,
+#login {
 	width: 50%;
 	margin: auto;
 }
 
-#contact > *,
-#login > * {
+#contact>*,
+#login>* {
 	text-align: center;
 }
 

@@ -28,4 +28,20 @@ async function displayWorks() {
     });
 }
 
+async function displayWorksGallery() {
+    const gallery = document.querySelector('.galleryModal');
+    const works = await getWorks();
+
+
+    works.forEach((work) => {
+        const figureElement = createWorkFigure(work);
+        gallery.appendChild(figureElement);
+
+        const iconeElement = document.createElement("i");
+        iconeElement.classList.add("fa-regular", "fa-trash-can");
+        figureElement.appendChild(iconeElement);
+    });
+}
+
 displayWorks();
+displayWorksGallery();

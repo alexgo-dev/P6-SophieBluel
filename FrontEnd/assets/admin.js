@@ -21,6 +21,7 @@ async function admin() {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
     admin();
 });
