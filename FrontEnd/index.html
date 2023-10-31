@@ -15,14 +15,15 @@
 </head>
 
 <body>
-	<div onclick="closeModal()"" class="overlay"></div>
+	<div onclick="closeModal()" class=" overlay"></div>
 
-	<div onclick ="openModal()" class="editBar">
+	<div onclick="openModal()" class="editBar">
 		<i class="fa-regular fa-pen-to-square"></i>
 		<p>Mode édition</p>
 	</div>
 
 	<dialog class="modalContainer">
+
 		<div class="modal">
 			<i onclick="closeModal()" class="fa-solid fa-xmark closeModal"></i>
 			<h2>Galerie photo</h2>
@@ -30,6 +31,35 @@
 			<hr>
 			<button class="addPictureButton">Ajouter une photo</button>
 		</div>
+
+		<div class="addPictureModal">
+			<i class="fa-solid fa-left"></i>
+			<i onclick="closeModal()" class="fa-solid fa-xmark closeModal"></i>
+			<h2>Ajout photo</h2>
+			<div class="uploadContainer">
+				<!-- <div class="pictureUpload"> -->
+				<label for="imageUpload" class="uploadLabel">
+					<i class="fa-regular fa-image"></i>
+					<img id="selectedImage" src="#" alt="Selected Image" style="display: none;">
+					<button class="uploadButton">+ Ajouter photo</button>
+					<input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display: none;">
+					<p>jpg, png: 4mo max</p>
+				</label>
+			</div>
+			<!-- </div> -->
+
+			<label for="title">Titre</label>
+			<input type="text" name="title" id="title">
+			<label for="category">Catégorie</label>
+			<input list="categories" name="category" id="category">
+			<datalist id="categories"></datalist>
+			<hr>
+			<button class="validateButton">Valider</button>
+
+		</div>
+		</div>
+
+
 	</dialog>
 	<header>
 		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>

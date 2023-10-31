@@ -208,16 +208,18 @@ li:hover {
 .modalContainer {
 	display: flex;
 	top: 601px;
+	border-radius: 10px;
+	border: none;
 	display: none;
 }
 
 .modal {
 	width: 630px;
 	height: 688px;
-	border-radius: 10px;
+	display: none;
 }
 
-.modal h2 {
+.modalContainer h2 {
 	display: flex;
 	justify-content: center;
 	font-family: "Work Sans";
@@ -231,7 +233,7 @@ li:hover {
 	position: relative;
 }
 
-.modal .fa-xmark {
+.modalContainer .fa-xmark {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -280,7 +282,7 @@ hr {
 	border: 1px solid #B3B3B3;
 }
 
-.addPictureButton {
+.modalContainer button {
 	display: block;
 	cursor: pointer;
 	background-color: #1D6154;
@@ -293,6 +295,87 @@ hr {
 	border-radius: 60px;
 	border: none;
 	margin: 38px auto 23px auto;
+}
+
+/* Deuxième modale  */
+
+.addPictureModal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 630px;
+	height: 688px;
+}
+
+.uploadContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.uploadContainer .uploadLabel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #E8F1F6;
+	width: 420px;
+	height: 169px;
+	border-radius: 3px;
+	padding: 0;
+	margin-top: 36px;
+	margin-bottom: 20px;
+}
+
+.uploadLabel .uploadLabel {
+ padding: 0;
+ align-self: initial;
+ cursor: pointer;
+}
+
+.uploadLabel .uploadButton {
+	background-color: #CBD6DC;
+	color: #306685;
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	margin-bottom: 7px;
+	margin: 0 0 7px 0;
+   }
+
+.uploadLabel p {
+	color: #444444;
+	font-size: 10px;
+	text-align: center;
+}
+
+#imageUpload {
+	display: none;
+}
+
+.uploadLabel .fa-image {
+	font-size: 68px;
+	color: #B9C5CC;
+	padding-bottom: 10px;
+}
+
+#imageUpload input {
+	display: hidden;
+}
+
+.addPictureModal label {
+	align-self: flex-start;
+	padding: 21px 0px 10px 105px;
+}
+
+.addPictureModal input {
+	width: 420px;
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
+.addPictureModal hr {
+	margin-top: 47px;
 }
 
 .editBar {
