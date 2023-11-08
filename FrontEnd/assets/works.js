@@ -49,7 +49,7 @@ async function displayWorksGallery() {
 
 const token = localStorage.getItem("token");
 
-function deleteWork(token) {
+async function deleteWork(token) {
     const galleryModal = document.querySelector('.galleryModal');
     galleryModal.addEventListener("click", function (event) {
         if (event.target.classList.contains("fa-trash-can")) {
@@ -63,13 +63,13 @@ function deleteWork(token) {
                     "Authorization": `Bearer ${token}`
                 }
             })
-            .then(function (response) {
-                if (response.ok) {
-                    figure.remove();
-                } else {
-                    console.error("Erreur dans la suppression du projet");
-                }
-            });
+                .then(function (response) {
+                    if (response.ok) {
+                        figure.remove();
+                    } else {
+                        console.error("Erreur dans la suppression du projet");
+                    }
+                });
         }
     });
 }

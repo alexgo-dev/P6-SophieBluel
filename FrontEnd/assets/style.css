@@ -201,7 +201,7 @@ li:hover {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	display: none;
+	/* display: none; */
 }
 
 
@@ -210,13 +210,11 @@ li:hover {
 	top: 601px;
 	border-radius: 10px;
 	border: none;
-	display: none;
 }
 
 .modal {
 	width: 630px;
 	height: 688px;
-	display: none;
 }
 
 .modalContainer h2 {
@@ -233,11 +231,24 @@ li:hover {
 	position: relative;
 }
 
+
+.modalContainer .fa-arrow-left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 21px;
+	height: 21px;
+	left: 40px;
+	top: 29px;
+}
+
 .modalContainer .fa-xmark {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
+	font-size: 15px;
 	left: 615px;
 	top: 30px;
 }
@@ -305,6 +316,7 @@ hr {
 	align-items: center;
 	width: 630px;
 	height: 688px;
+	display: none;
 }
 
 .uploadContainer {
@@ -326,13 +338,16 @@ hr {
 	margin-bottom: 20px;
 }
 
-.uploadLabel .uploadLabel {
+.uploadLabel {
  padding: 0;
  align-self: initial;
  cursor: pointer;
 }
 
 .uploadLabel .uploadButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #CBD6DC;
 	color: #306685;
 	width: 173px;
@@ -352,14 +367,15 @@ hr {
 	display: none;
 }
 
+#selectedImage {
+	width: 129px;
+	height: 193px;
+}
+
 .uploadLabel .fa-image {
 	font-size: 68px;
 	color: #B9C5CC;
 	padding-bottom: 10px;
-}
-
-#imageUpload input {
-	display: hidden;
 }
 
 .addPictureModal label {
@@ -374,8 +390,21 @@ hr {
 	box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
 }
 
+#category {
+    width: 420px;
+    height: 51px;
+    border: none;
+	background: white;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+}
+
 .addPictureModal hr {
 	margin-top: 47px;
+}
+
+#validateButton {
+    background: rgba(167, 167, 167, 1);
+    /* Add other button styles */
 }
 
 .editBar {

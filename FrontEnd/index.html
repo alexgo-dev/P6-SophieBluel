@@ -29,34 +29,32 @@
 			<h2>Galerie photo</h2>
 			<div class="galleryModal"></div>
 			<hr>
-			<button class="addPictureButton">Ajouter une photo</button>
+			<button class="addPictureButton" onclick="toggleModals()">Ajouter une photo</button>
 		</div>
 
 		<div class="addPictureModal">
-			<i class="fa-solid fa-left"></i>
+			<i onclick="backModals()" class="fa-solid fa-arrow-left"></i>
 			<i onclick="closeModal()" class="fa-solid fa-xmark closeModal"></i>
 			<h2>Ajout photo</h2>
 			<div class="uploadContainer">
-				<!-- <div class="pictureUpload"> -->
 				<label for="imageUpload" class="uploadLabel">
 					<i class="fa-regular fa-image"></i>
 					<img id="selectedImage" src="#" alt="Selected Image" style="display: none;">
-					<button class="uploadButton">+ Ajouter photo</button>
-					<input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display: none;">
-					<p>jpg, png: 4mo max</p>
+					<span class="uploadButton">+ Ajouter photo</span>
+					<input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display: none;"
+						onchange="displayImage()">
+						<p>jpg, png: 4mo max</p>
 				</label>
 			</div>
-			<!-- </div> -->
 
 			<label for="title">Titre</label>
 			<input type="text" name="title" id="title">
 			<label for="category">Catégorie</label>
-			<input list="categories" name="category" id="category">
-			<datalist id="categories"></datalist>
-			<hr>
-			<button class="validateButton">Valider</button>
+			<select id="category" name="category">
+			</select>
 
-		</div>
+			<hr>
+			<button type="submit" id="validateButton" disabled>Valider</button>
 		</div>
 
 
