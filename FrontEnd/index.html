@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div onclick="closeModal()" class=" overlay"></div>
+	<div onclick="closeModal()" class="overlay"></div>
 
 	<div onclick="openModal()" class="editBar">
 		<i class="fa-regular fa-pen-to-square"></i>
@@ -43,7 +43,7 @@
 					<span class="uploadButton">+ Ajouter photo</span>
 					<input type="file" id="imageUpload" name="imageUpload" accept="image/*" style="display: none;"
 						onchange="displayImage()">
-						<p>jpg, png: 4mo max</p>
+						<span id="imageFormat">jpg, png: 4mo max</span>
 				</label>
 			</div>
 
@@ -63,8 +63,8 @@
 		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 		<nav>
 			<ul>
-				<li>projets</li>
-				<li>contact</li>
+				<li><a href="#portfolio">projets</a></li>
+				<li><a href="#contact">contact</a></li>
 				<li><a href="login.html" id="login">login</a></li>
 				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 			</ul>
@@ -73,7 +73,7 @@
 	<main>
 		<section id="introduction">
 			<figure>
-				<img src="./assets/images/sophie-bluel.png" alt="">
+				<img src="./assets/images/sophie-bluel.png" alt="Sophie Bluel">
 			</figure>
 			<article>
 				<h2>Designer d'espace</h2>

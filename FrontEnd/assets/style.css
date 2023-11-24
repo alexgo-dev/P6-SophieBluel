@@ -201,7 +201,7 @@ li:hover {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	/* display: none; */
+	display: none;
 }
 
 
@@ -210,6 +210,7 @@ li:hover {
 	top: 601px;
 	border-radius: 10px;
 	border: none;
+	display: none;
 }
 
 .modal {
@@ -241,6 +242,7 @@ li:hover {
 	height: 21px;
 	left: 40px;
 	top: 29px;
+	cursor: pointer;
 }
 
 .modalContainer .fa-xmark {
@@ -357,7 +359,7 @@ hr {
 	margin: 0 0 7px 0;
    }
 
-.uploadLabel p {
+.uploadLabel span {
 	color: #444444;
 	font-size: 10px;
 	text-align: center;
@@ -468,6 +470,7 @@ hr {
 	border: none;
 	margin-left: 30px;
 	cursor: pointer;
+	display: none;
 }
 
 .editButton i {
@@ -491,6 +494,7 @@ hr {
 	border-radius: 60px;
 	padding: 9px 20px 9px 20px;
 	margin-right: 10px;
+	cursor: pointer;
 }
 
 #selected {

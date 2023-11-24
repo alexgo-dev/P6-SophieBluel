@@ -1,11 +1,13 @@
 async function admin() {
     const editBar = document.querySelector(".editBar");
     const login = document.getElementById("login");
+    const editButton = document.querySelector(".editButton")
     const editFilters = document.querySelector(".filters");
 
     if (localStorage.getItem("token")) {
         editBar.style.display = "flex";
         login.textContent = "logout";
+        editButton.style.display = "flex";
         editFilters.style.display = "none";
 
         login.addEventListener("click", function (event) {
@@ -72,7 +74,7 @@ function displayImage() {
     const imageInput = document.getElementById('imageUpload');
     const icon = document.querySelector('.fa-image');
     const label = document.querySelector('.uploadButton');
-    const paragraph = document.querySelector('.uploadLabel p');
+    const paragraph = document.getElementById('imageFormat');
     const selectedImage = document.getElementById('selectedImage');
 
     const noFilesSelected = imageInput.files.length === 0;
@@ -148,7 +150,6 @@ function addNewProject(event) {
             return response.json();
         })
         .then(data => {
-            // Insérer le code ici pour mettre à jour le DOM avec le nouveau projet
             updateGalleryWithNewProject(data);
         })
         .catch(error => {
