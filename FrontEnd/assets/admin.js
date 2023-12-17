@@ -31,7 +31,6 @@ function closeModal() {
 }
 
 function toggleModals() {
-    const modalContainer = document.querySelector('.modalContainer');
     const modal = document.querySelector('.modal');
     const addPictureModal = document.querySelector('.addPictureModal');
 
@@ -40,7 +39,6 @@ function toggleModals() {
 }
 
 function backModals() {
-    const modalContainer = document.querySelector('.modalContainer');
     const modal = document.querySelector('.modal');
     const addPictureModal = document.querySelector('.addPictureModal');
 
@@ -149,15 +147,16 @@ function addNewProject(event) {
             }
             return response.json();
         })
-        .then(data => {
-            updateGalleryWithNewProject(data);
+        .then(async data => {
+            await updateGalleryWithNewProject(data);
+            await displayWorksGallery();
         })
         .catch(error => {
             console.error('Erreur lors de l\'ajout d\'un nouveau projet :', error);
         });
 }
 
-function updateGalleryWithNewProject(projectData) {
+async function updateGalleryWithNewProject(projectData) {
     const newProjectCard = document.createElement('div');
     newProjectCard.classList.add('project-card');
 
@@ -168,8 +167,8 @@ function updateGalleryWithNewProject(projectData) {
     const imageElement = document.createElement('img');
     imageElement.src = projectData.imageUrl;
 
-    newProjectCard.appendChild(titleElement);
     newProjectCard.appendChild(imageElement);
+    newProjectCard.appendChild(titleElement);
 
     const gallery = document.querySelector('.gallery');
     gallery.appendChild(newProjectCard);

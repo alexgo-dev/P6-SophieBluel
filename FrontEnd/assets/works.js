@@ -66,6 +66,7 @@ async function deleteWork(token) {
                 .then(function (response) {
                     if (response.ok) {
                         figure.remove();
+                        displayWorks();
                     } else {
                         console.error("Erreur dans la suppression du projet");
                     }
